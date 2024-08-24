@@ -1,0 +1,29 @@
+
+
+<div class="gallery_section layout_padding2">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2 style="text-align: center;">
+          Gallery
+        </h2>
+      </div>
+      <div class="row">
+        <ng-container *ngFor="let gallary of gallaries">
+        <div class="col-sm-4 col-md-3 px-0">
+            <div class="img-box">
+              <img src="{{gallary.coverImg}}" alt="">
+              <a href="{{gallary.coverImg}}" data-toggle="lightbox" data-gallery="gallery">
+                <b>{{gallary.description}}</b>
+              </a>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="btn-box">
+        <a href="">
+          View All
+        </a>
+      </div>
+    </div>
+  </div>
+  

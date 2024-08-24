@@ -1,0 +1,445 @@
+<div class="single-product section">
+  <div *ngIf="visible">
+    <p-dialog 
+      header="Phương thức thanh toán" 
+      [modal]="true" 
+      [(visible)]="visible" 
+      [style]="{ width: '50rem' }" 
+      [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+      [maximizable]="true">
+      <ngx-paypal [config]="payPalConfig"></ngx-paypal> <br>
+      <button (click)="onPay()">Thanh toán VNPay</button>
+  </p-dialog>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="left-image" style="border: 1px solid #eee">
+              <img src="{{showDetail.photo}}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-7 align-self-center">
+            <div>
+              <h4>{{showDetail.title}}</h4>
+              <span 
+                >Ngày chiếu : {{showDetail.showDate}} - Suất chiếu : {{showDetail.showTime}}</span
+              >
+              
+              <p style="margin-top: 15px;">{{showDetail.description}}</p>
+
+              <ul style="margin-top: -30px;">
+                <li>
+                  <span>Genre:</span>
+                  <span style="color: #333; text-transform: capitalize; width: 350px;">{{showDetail.genre}}</span>
+                </li>
+                <li>
+                  <span>Duration:</span>
+                  <span style="color: #333">{{showDetail.duration}}</span>
+                </li>
+                <li>
+                  <span>Director:</span>
+                  <span style="color: #333; text-transform: capitalize; width: 350px;">{{showDetail.director}}</span>
+                </li>
+                <li>
+                  <span>Actor:</span>
+                  <span style="color: #333; text-transform: capitalize; width: 350px;">{{showDetail.actor}}</span>
+                </li>
+                <li>
+                  <span>Publisher:</span>
+                  <span style="color: #333; text-transform: capitalize;  width: 350px;">{{showDetail.publisher}}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <form  [formGroup]="ticketForm" (ngSubmit)="buyTicket()"
+          method="post"
+          
+          style="width: 100%"
+        >
+          <div
+            class="surface-card p-4 shadow-2 border-round w-full"
+            style="border: 1px solid #eee; border-radius: 6px"
+          >
+            <div class="text-center mb-5">
+              <div
+                class="d-flex align-items-center justify-content-center mx-auto"
+              >
+                <h4 class="m-0" style="color: #b31e8d; padding: 20px 0">
+                  <i class="fa fa-store me-3" style="color: #b31e8d"></i>ABCD
+                  MALL
+                </h4>
+              </div>
+              <div
+                class="text-900 text-3xl font-medium mb-3"
+                style="font-size: 14px"
+              >
+                Hope you have a good time at our cinema
+              </div>
+            </div>
+
+            <div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-bottom: 20px;
+                "
+              >
+                <label
+                  for="NameCustomer"
+                  class="block text-900 font-medium mb-2"
+                  >Họ và tên:</label
+                >
+                <input
+                  id="NameCustomer"
+                  formControlName="name"
+                  type="text"
+                  placeholder="Nguyễn Văn A"
+                  pInputText
+                  class="w-full"
+                  style="width: 100%; text-align: left; border-radius: 4px"
+              
+                />
+                <div *ngIf="ticketForm.get('name')?.invalid && ticketForm.get('name')?.touched">
+                  <small *ngIf="ticketForm.get('name')?.errors?.['required']">Full Name is required.</small>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-bottom: 20px;
+                "
+              >
+                <label
+                  for="PhoneCustomer"
+                  class="block text-900 font-medium mb-2"
+                  >Số điện thoại:</label
+                >
+                <input
+                  id="PhoneCustomer"
+                  type="text"
+                  formControlName="phone"
+                  placeholder="+123 456 789"
+                  pInputText
+                  class="w-full"
+                  style="width: 100%; text-align: left; border-radius: 4px"
+                  
+                />
+                <div *ngIf="ticketForm.get('phone')?.invalid && ticketForm.get('phone')?.touched">
+                  <small *ngIf="ticketForm.get('phone')?.errors?.['required']">Phone is required.</small>
+                  <small *ngIf="ticketForm.get('phone')?.errors?.['pattern']">Phone must be a valid number with 10 to 11 digits.</small>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-bottom: 20px;
+                "
+              >
+                <label
+                  for="PhoneCustomer"
+                  class="block text-900 font-medium mb-2"
+                  >Email:</label
+                >
+                <input
+                  id="PhoneCustomer"
+                  type="email"
+                  formControlName="email"
+                  placeholder="nguyenvana@gmail.com"
+                  pInputText
+                  class="w-full"
+                  style="width: 100%; text-align: left; border-radius: 4px"
+                  
+                />
+                <div *ngIf="ticketForm.get('email')?.invalid && ticketForm.get('email')?.touched">
+                  <small *ngIf="ticketForm.get('email')?.errors?.['required']">Email is required.</small>
+                  <small *ngIf="ticketForm.get('email')?.errors?.['email']">Enter a valid email address.</small>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-bottom: 20px;
+                "
+              >
+                <label class="block text-900 font-medium mb-2"
+                  >Danh sách ghế đã chọn:</label
+                >
+                <input
+                  type="text"
+                  [value]="selectedSeats1"
+                  
+                  pInputText
+                  class="w-full"
+                  disabled
+                  style="width: 100%; text-align: left; border-radius: 4px"
+                />
+              </div>
+              <div
+              style="
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px; 
+              "
+            >
+              <label class="block text-900 font-medium mb-2"
+                >Chọn combo:</label
+              >
+              <table>
+                <tr>
+                  <td>Tên combo</td>
+                  <td>Số lượng</td>
+                </tr>
+                <tr *ngFor="let combo of combos">
+                  <td>{{combo.name}}</td>
+                  <td><input type="number" value="0" (input)="onValueChange($event, combo.id, combo.price)"></td>
+                </tr>
+              </table>
+           
+              <input type="hidden" value="{{showDetail.id}}" formControlName="showTimeId">
+              
+            </div>
+              <div style="width: 100%">
+                <button
+                
+                  pButton
+                  pRipple
+                  label="Submit"
+                  class="w-full"
+                  style="
+                    width: 100%;
+                    background: #b31e8d;
+                    border: 1px solid #b31e8d;
+                    border-radius: 4px;
+                  "
+                ></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-12">
+        <div class="sep"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div
+          style="
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #333;
+          "
+        >
+          <h5>Screen</h5>
+        </div>
+        <div
+          style="
+            width: 100%;
+            height: 30px;
+            clip-path: polygon(
+              0% 44%,
+              6% 36%,
+              15% 28%,
+              22% 22%,
+              32% 15%,
+              42% 11%,
+              52% 8%,
+              64% 11%,
+              75% 14%,
+              83% 19%,
+              90% 26%,
+              94% 31%,
+              100% 42%,
+              87% 35%,
+              81% 31%,
+              76% 25%,
+              70% 22%,
+              62% 19%,
+              54% 16%,
+              45% 17%,
+              38% 21%,
+              28% 27%,
+              20% 31%,
+              13% 36%,
+              8% 41%
+            );
+            background: #333;
+            margin: 0 auto;
+          "
+        >
+          Screen
+        </div>
+        <div
+          [style.width]="200"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+          "
+        >
+        <div class="seating-chart">
+          <div *ngFor="let row of rows">
+            <span class="row-label">{{ row }}</span>
+            
+            <ng-container *ngIf="row !== 'H'; else doubleSeatRow">
+              <button 
+                *ngFor="let seat of seats" 
+                class="seat"
+                [ngClass]="{
+                  'selected': isSeatSelected(row + seat),
+                  'booked': isBooked(row + seat),
+                  'available': !isBooked(row + seat) && !isSeatSelected(row + seat)
+                }"
+                [disabled]="isBooked(row+seat)"
+                (click)="toggleSeat(row + seat)">
+                <!-- <span *ngIf="isBooked(row+seat)" style="font-size: 40px;position: relative;top: -10px;">X</span> Nếu mà ghế bị hư hay gì thì dùng code này -->
+                {{ row + seat }}
+              </button>
+            </ng-container>
+            
+            <ng-template #doubleSeatRow>
+              <button 
+                *ngFor="let pair of doubleSeats" 
+                class="seat double-seat"
+                [ngClass]="{
+                  'selected': isSeatSelected(row + pair[0]),
+                  'booked': isBooked(row + pair[0]),
+                  'available': !isBooked(row + pair[0]) && !isSeatSelected(row + pair[0])
+                }"
+                (click)="toggleSeat(row + pair[0])"
+                [disabled]="isBooked(row + pair[0])"
+                >
+                <!-- <span *ngIf="isBooked(row + pair[0])" style="font-size: 50px;position: relative;top: -19px;left: 0px;">X</span> -->
+                {{ row + pair[0] }}-{{ row + pair[1] }}
+              </button>
+            </ng-template>
+          </div>
+        </div>
+        
+      <!-- Hiển thị thông tin ghế đã chọn -->
+      <div *ngIf="selectedSeats.size > 0" class="selected-info">
+        Selected Seats: 
+        <span *ngFor="let seat of selectedSeats">{{ seat }} </span>
+      </div>
+      
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div style="margin: 100px 0 20px 0">
+          <h6 style="color: #333">Seat Note:</h6>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            width: 276px;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 100px;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: 30px;
+            "
+          >
+            <div
+              style="
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 4px;
+                border: 1px solid #aaa;
+                margin: 4px;
+                background: #aaa;
+                color: #fff;
+              "
+            >
+              X
+            </div>
+            <p style="margin: 0">: Broken</p>
+          </div>
+          <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              style="
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 4px;
+                border: 1px solid #aaa;
+                margin: 4px;
+                background: #ff6347;
+              "
+            ></div>
+            <p style="margin: 0">: Checked</p>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: 13px;
+            "
+          >
+            <div
+              style="
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 4px;
+                border: 1px solid #60e360;
+                margin: 4px;
+                color: #333;
+              "
+            ></div>
+            <p style="margin: 0">: Available</p>
+          </div>
+          <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              style="
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 4px;
+                border: 1px solid #e33333;
+                margin: 4px;
+                color: #333;
+              "
+            ></div>
+            <p style="margin: 0">: Sold Out</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p-toast></p-toast>

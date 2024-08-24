@@ -1,0 +1,77 @@
+.custom-radio-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+ 
+}
+
+.custom-radio-label {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-radio-label:hover,
+.custom-radio-label:focus {
+
+  color: #ffffff;
+}
+
+.custom-radio-label.active {
+
+  color: #ffffff;
+}
+
+
+.select-cinema {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.select-cinema:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.select-cinema option {
+  padding: 12px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 16px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-cinema::after {
+  content: '\25BC'; 
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

@@ -1,0 +1,67 @@
+<!-- update-account.component.html -->
+<h2 class="mt-5">Thông tin tài khoản</h2>
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="update-form">
+  <div class="form-group">
+    <label for="username">{{ 'username' | translate }}:</label>
+    <input id="username" formControlName="username" type="text" [ngModel]="account.username"/>
+  </div>
+  
+  <div class="form-group">
+    <label for="currentPassword">{{ 'current_pass' | translate }}:</label>
+    <div class="password-field">
+      <input id="currentPassword" formControlName="currentPassword" [type]="showCurrentPassword ? 'text' : 'password'" />
+      <i class="eye-icon fas" [ngClass]="showCurrentPassword ? 'fa-eye' : 'fa-eye-slash'" (click)="togglePasswordVisibility('currentPassword')"></i>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="newPassword">{{ 'new_pass' | translate }}:</label>
+    <div class="password-field">
+      <input id="newPassword" formControlName="newPassword" [type]="showNewPassword ? 'text' : 'password'" />
+      <i class="eye-icon fas" [ngClass]="showNewPassword ? 'fa-eye' : 'fa-eye-slash'" (click)="togglePasswordVisibility('newPassword')"></i>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="confirmPassword">{{ 'confirm_pass' | translate }}:</label>
+    <div class="password-field">
+      <input id="confirmPassword" pTooltip="{{ 'notice_pass' | translate }}" formControlName="confirmPassword" [type]="showConfirmPassword ? 'text' : 'password'" />
+      <i class="eye-icon fas" [ngClass]="showConfirmPassword ? 'fa-eye' : 'fa-eye-slash'" (click)="togglePasswordVisibility('confirmPassword')"></i>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" [ngModel]="account.email"/>
+  </div>
+
+  <div class="form-group">
+    <label for="birthday">{{ 'birth' | translate }}:</label>
+    <input id="birthday" formControlName="birthday" type="date" [ngModel]="account.birthday" />
+  </div>
+
+  <div class="form-group">
+    <label for="phone">{{ 'phone' | translate }}:</label>
+    <input id="phone" formControlName="phone" type="tel" [ngModel]="account.phone"/>
+  </div>
+
+  <div class="form-group">
+    <label>{{ 'gender' | translate }}:</label>
+    <div class="radio-group">
+      <label>
+        <input type="radio" formControlName="gender" value="{{ 'male' | translate }}:" [ngModel]="account.gender"/>
+        {{ 'male' | translate }}
+      </label>
+      <label>
+        <input type="radio" formControlName="gender" value="{{ 'female' | translate }}:" [ngModel]="account.gender"/>
+        {{ 'female' | translate }}
+      </label>
+      <label>
+        <input type="radio" formControlName="gender" value="{{ 'other' | translate }}:" [ngModel]="account.gender"/>
+        {{ 'other' | translate }}
+      </label>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!updateForm.valid">{{ 'update' | translate }}</button>
+</form>

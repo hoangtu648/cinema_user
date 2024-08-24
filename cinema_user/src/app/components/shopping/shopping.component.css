@@ -1,0 +1,64 @@
+.feed-item {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 2px;
+    font-family: Arial, sans-serif;
+}
+
+.feed-item h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.feed-item h2 a:hover {
+    text-decoration: underline;
+}
+
+.feed-item img {
+    display: block;
+    width: 300px;
+}
+
+.feed-item p {
+    margin-bottom: 10px;
+}
+
+.feed-item strong {
+    color: #3e3d3d;
+    font-style: italic;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút */
+    align-items: center;
+    position: relative;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    border-radius: 4px;
+  }
+  
+  .pagination button {
+    background-color: #fff;
+	text-align: center;
+	text-decoration: none;
+    padding: 5px 10px;
+	color: #252525;
+	border-radius: 4px;
+	margin: 10px;
+	box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.5);
+    transition: all .3s ease ;
+	&:hover{
+        color: #fff;
+		background-color:  #ff4242;
+    }
+  }
+  
+  .pagination span {
+    font-size: 1.2em;
+  }

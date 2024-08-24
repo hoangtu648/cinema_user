@@ -1,0 +1,31 @@
+<div class="chat-container">
+    <div class="messages">
+      <table border="0">
+        <ng-container *ngFor="let msg of messages">
+          <tr *ngIf="msg.role == 1">
+            <td></td>
+            <td class="sent-message">
+              <span style="font-size: 10px;">{{msg.time}}</span>
+              <br>
+              {{msg.message}}
+            </td>
+          </tr>
+          <tr *ngIf="msg.role == 0">
+            <td class="received-message">
+       
+              <span style="font-size: 10px;">{{msg.time}}</span>
+              <br>
+              {{msg.message}}
+              
+            </td>
+            <td></td>
+          </tr>
+        </ng-container>
+      </table>
+    </div>
+    <div class="input-container">
+      <input type="text" [(ngModel)]="newMessage" class="message-input" placeholder="Nhập tin nhắn">
+      <button (click)="sendMessage()" class="send-button">Gửi</button>
+    </div>
+  </div>
+  

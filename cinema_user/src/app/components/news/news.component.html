@@ -1,0 +1,28 @@
+
+<div class="container-xxl py-5">
+  <div class="container">
+      <div class="section-title text-center">
+          <h1 class="display-5 mb-5">{{ 'now_showing' | translate }}</h1>
+      </div>
+      <div class="row g-4">
+        <ng-container *ngFor="let movie of movies">
+          <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="service-item">
+                  <div class="overflow-hidden d-flex justify-content-center">
+                      <img class="img-fluid rounded-3" src="{{movie.photo}}" alt="">
+                  </div>
+                  <div class="p-4 text-center">
+                      <h4 class="" style="color: #B31E8D; padding-left: 10px;">
+                        {{movie.title}}</h4>
+                      <div class="p-4" style="height: 90px;">
+                        <h6 class="pb-2">Thể loại:  <span>{{movie.genre}}</span></h6>
+                        <h6 class="pb-2">Thời lượng:  <span>{{movie.duration}}</span></h6>
+                      </div>
+                      <a class="fw-medium p-4 d-flex justify-content-center"  [routerLink]="['/movie-details', movie.id]">Mua vé<i class="fa fa-arrow-right ms-2 pt-1"></i></a>
+                  </div>
+              </div>
+          </div>
+        </ng-container>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,525 @@
+<!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" width="410" height="654" src="assets/img/carousel/minicouple.jpg" alt="Image">
+                <div class="carousel-caption d-flex align-items-center">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center justify-content-lg-start">
+                            <div class="col-10 col-lg-7 text-center text-lg-start">
+                                <h6 class="text-white text-uppercase mb-3 animated slideInDown">// {{ 'title1' | translate }} //</h6>
+                                <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">
+                                    {{ 'content1' | translate }} 
+                                </h1>
+                                <a href="" style="background-color:#B31E8D" class="btn btn-primary py-3 px-5 animated slideInDown" [routerLink]="['/cinema']" >{{ 'try' | translate }}<i class="fa fa-arrow-right ms-3"></i></a>
+                            </div>
+                            <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                                <img class="img-fluid" src="assets/img/carousel/minicouple.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" width="410" height="654" src="assets/img/carousel/coca.jpg" alt="Image">
+                <div class="carousel-caption d-flex align-items-center">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center justify-content-lg-start">
+                            <div class="col-10 col-lg-7 text-center text-lg-start">
+                                <h6 class="text-white text-uppercase mb-3 animated slideInDown">//{{ 'title1' | translate }} //</h6>
+                                <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">{{'content2' | translate}}</h1>
+                                <a href="" style="background-color:#B31E8D" class="btn btn-primary py-3 px-5 animated slideInDown" [routerLink]="['/cinema']" >{{ 'try' | translate }}<i class="fa fa-arrow-right ms-3"></i></a>
+                            </div>
+                            <div class="col-lg-5 d-none d-lg-flex animated zoomIn">
+                                <img class="img-fluid" src="assets/img/carousel/sacom.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100"  width="410" height="654" src="assets/img/carousel/980x448_3_.png" alt="Image">
+                <div class="carousel-caption d-flex align-items-center">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center justify-content-lg-start">
+                           <div class="col-10 col-lg-7 text-center text-lg-start">
+                                <h6 class="text-white text-uppercase mb-3 animated slideInDown">//{{ 'title1' | translate }} //</h6>
+                                <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown"> {{'content3' | translate}} </h1>
+                                <a href="" style="background-color:#B31E8D" class="btn btn-primary py-3 px-5 animated slideInDown" [routerLink]="['/cinema']" >{{ 'try' | translate }}<i class="fa fa-arrow-right ms-3"></i></a>
+                            </div>
+                            <div class="col-lg-5 d-none d-lg-flex animated zoomIn" style="position: relative; left: 10%;">
+                                <img class="img-fluid" src="assets/img/carousel/980x448_3_.png"   alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" >
+                <img class="w-100"  style="position: relative; bottom: 50%;"  width="410" height="654" src="assets/img/carousel/aaaaa.jpg" alt="Image">
+                <div class="carousel-caption d-flex align-items-center">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center justify-content-lg-start">
+                          <div class="col-10 col-lg-7 text-center text-lg-start">
+                                <h6 class="text-white text-uppercase mb-3 animated slideInDown">//{{ 'title1' | translate }} //</h6>
+                                <h1 class="display-3 text-white mb-4 pb-3 animated slideInDown">{{ 'scan' | translate }}</h1>
+                                <a href="" style="background-color:#B31E8D" class="btn btn-primary py-3 px-5 animated slideInDown" [routerLink]="['/cinema']" >{{ 'try' | translate }}<i class="fa fa-arrow-right ms-3"></i></a>
+                            </div>
+                            <div class="col-lg-5 d-none d-lg-flex animated zoomIn" style="position: relative; left: 10%;">
+                                <img class="img-fluid" src="assets/img/carousel/aaaaa.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="d-flex py-5 px-4">
+                    <!-- <i class="fa fa-certificate fa-3x text-primary flex-shrink-0"></i> -->
+                    <img src="assets/img/order.png" width="100" height="100">
+                    <div class="ps-4">
+                        <h5 class="mb-3">
+                            {{ 'service' | translate }}</h5>
+                        <p> {{ 'service_c' | translate }} </p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="d-flex bg-light py-5 px-4">
+                    <img src="assets/img/group.png" width="100" height="100">
+                    
+                    <div class="ps-4">
+                        <h5 class="">
+                            {{ 'member' | translate }}
+                            </h5>
+                            <br>
+                            <p>   {{ 'member_c1' | translate }} <br>    {{ 'member_c2' | translate }} <br>    {{ 'member_c3' | translate }} </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="d-flex py-5 px-4">
+                    <img src="assets/img/trade.png" width="100" height="100">
+                    <div class="ps-4">
+                        <h5 class="mb-3">{{ 'title' | translate }}</h5>
+                       
+                        <p>{{ 'title_c1' | translate }}<span style="color:#B31E8D">T Cinema</span> {{ 'title_c2' | translate }} </p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="d-flex py-5 px-4">
+                    <i class="fa fa-certificate fa-3x text-primary flex-shrink-0"></i>
+                    <div class="ps-4">
+                        <h5 class="mb-3">Quality Products</h5>
+                        <p>Products come from quality and long-standing brands in the world</p>
+                        <a class="text-secondary border-bottom" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="d-flex bg-light py-5 px-4">
+                    <i class="fa fa-users-cog fa-3x text-primary flex-shrink-0"></i>
+                    <div class="ps-4">
+                        <h5 class="mb-3">Expert Workers</h5>
+                        <p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
+                        <a class="text-secondary border-bottom" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="d-flex py-5 px-4">
+                    <i class="fa fa-tools fa-3x text-primary flex-shrink-0"></i>
+                    <div class="ps-4">
+                        <h5 class="mb-3">Modern Equipment</h5>
+                        <p>Good service quality ensures your shopping goes well</p>
+                        <a class="text-secondary border-bottom" href="">Read More</a>
+                    </div>
+                </div>
+            </div> -->
+            <h1 style="text-align: center;">{{ 'payment' | translate }} <span style="color:#B31E8D">T Cinema</span></h1>
+            
+        </div>
+        <div  style="text-align: center;">
+            <img src="assets/img/Logo-MoMo-Circle.webp" height="200px" width="200px" alt="">
+            <img src="assets/img/logovnpay.png" height="250px" width="250px" alt="">
+            <img src="assets/img/logopaypal.webp" height="250px" width="250px" alt="">
+        </div>
+        
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- About Start -->
+<div  id="map" class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 pt-4" style="min-height: 400px;">
+                <div class="position-relative h-100 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="position-absolute img-fluid w-100 h-100" src="assets/img/map.jpg" style="object-fit: cover;" alt="">
+                 
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h6 class=" text-uppercase" style="color:#B31E8D">//{{'cinema_loc' | translate}}//</h6>
+                <h1 class="mb-4"><span style="color:#B31E8D">ABCD</span> {{ 'mall' | translate }} <br></h1>
+                <p class="mb-4">{{'des_mall' | translate}}- <span style="color:#B31E8D">T Cinema</span>.</p>
+                <div class="row g-4 mb-3 pb-3">
+                    <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="d-flex">
+                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                <span class="fw-bold text-secondary">01</span>
+                            </div>
+                            <div class="ps-3">
+                                <h6>{{'1st' | translate}}</h6>
+                                <span>{{'1st_des' | translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="d-flex">
+                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                <span class="fw-bold text-secondary">02</span>
+                            </div>
+                            <div class="ps-3">
+                                <h6>{{'2nd' | translate}}</h6>
+                                <span>{{'2nd_des' | translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="d-flex">
+                            <div class="bg-light d-flex flex-shrink-0 align-items-center justify-content-center mt-1" style="width: 45px; height: 45px;">
+                                <span class="fw-bold text-secondary">03</span>
+                            </div>
+                            <div class="ps-3">
+                                <h6>{{'3rd' | translate}}</h6>
+                                <span><span style="color:#B31E8D">T Cinema</span> {{'3rd_des' | translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<!-- Fact Start -->
+<div class="container-fluid fact bg-dark my-5 py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                <i class="fa fa-check fa-2x text-white mb-3"></i>
+                <h2 class="text-white mb-2" data-toggle="counter-up">15</h2>
+                <p class="text-white mb-0">{{'exp' | translate}}</p>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                <!-- <i class="fa fa-users-cog fa-2x text-white mb-3"></i> -->
+                <img src="assets/img/badge.png" width="50" height="50" >
+                <h2 class="text-white mb-2" data-toggle="counter-up">500+</h2>
+                <p class="text-white mb-0">{{'award' | translate}}</p>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                <img src="assets/img/star.png" width="50" height="50" >
+                <h2 class="text-white mb-2" data-toggle="counter-up">5.0/5</h2>
+                <p class="text-white mb-0">{{'danh_gia' | translate}}</p>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                <img src="assets/img/partners.png" width="50" height="50" >
+                <h2 class="text-white mb-2" data-toggle="counter-up">1000</h2>
+                <p class="text-white mb-0">
+                    {{'partner' | translate}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fact End -->
+
+
+<!-- Service Start -->
+<div class="container-xxl service py-5" id="news">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class=" text-uppercase" style="color:#B31E8D">// {{'service' | translate}} //</h6>
+            <h1 class="mb-5">{{'mem' | translate}}</h1>
+        </div>
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-4">
+                <div class="nav w-100 nav-pills me-4">
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                      
+                        <h4 class="m-0">{{'uu1' | translate}}</h4>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                       
+                        <h4 class="m-0">SUPER SALE HAPPY MONDAY</h4>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                       
+                        <h4 class="m-0">{{'uu3' | translate}}</h4>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                        
+                        <h4 class="m-0">{{'uu4' | translate}}</h4>
+                    </button>
+                    
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="tab-content w-100">
+                    <div class="tab-pane fade show active" id="tab-pane-1">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="assets/img/carousel/GC.png" width="250"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-3">{{'uu1' | translate}}</h3>
+                                <p class="mb-4">Với số tiền trong thẻ, bạn có thể sử dụng Thẻ để đổi vé xem phim hoặc bất kì sản
+                                phẩm nào tại quầy Bắp Nước của <span style="color:#B31E8D">T Cinema</span> .Với vẻ ngoài sang trọng và sự tiện lợi, bạn có thể lựa chọn các mệnh giá cho
+                                Thẻ Quà Tặng như 100.000đ; 200.000đ; 300.000đ; 500.000đ; hoặc 1.000.000đ. Thẻ có thời hạn sử dụng trong 1 năm và đặc
+                                biệt bạn có thể nạp thêm tiền để gia hạn bất cứ lúc nào. Bạn có thể mua thẻ thật dễ dàng mà không cần đăng ký thông tin
+                                chủ thẻ.
+                                <br>
+                                <br>
+                                 Đặc biệt bạn có
+                                thể đưa logo và thông điệp của công ty / tổ chức vào thẻ. Liên hệ phòng Kinh Doanh qua mẫu thông tin dưới đây, chúng tôi
+                                sẽ gọi lại cho bạn
+                                </p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-2">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="assets/img/carousel/45k.jpg"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-3">SUPER SALE HAPPY MONDAY</h3>
+                                <p class="mb-4">Welcome to the SUPER SALE HAPPY MONDAY 🌟
+                                        <br>
+                                    🎉🔥HAPPY MONDAY - XEM PHIM NGAY🔥
+                                    👉 Đừng quên mỗi thứ 2 hàng tuần, Cinestar có ưu đãi đồng zá 4️⃣5️⃣ka choa các pạn iuuu nhoa.</p>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-3">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="assets/img/carousel/thu_rap.png"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-3">{{'uu3' | translate}}</h3>
+                                <p class="mb-4">🎉 Chi phí marketing hợp lí
+                                    <br>
+                                Thuê phòng chiếu làm sự kiện, Ra mắt sản phẩm, họp công ty, hội nghị khách hàng.
+                                <br>
+                                Bạn đang tìm giải pháp giới thiệu sản phẩm hoặc quảng cáo độc đáo để tăng doanh thu cho công ty?
+                                <br>
+                                Bạn muốn tổ chức hội thảo hoặc chương trình có ý nghĩa cho đối tác thay cho lời cảm ơn về mối hợp tác lâu bền?
+                                <br>
+                                - Ra mắt sản phẩm/dự án với hình ảnh minh họa siêu khủng trên màn hình hiện đại của CGV.
+                                <br>
+                                - Không gian khán đài.
+                                <br>
+                                - Tầm nhìn tập trung 100%, choáng ngợp.
+                                <br>
+                                - Âm thanh lập thể, chia đều tới từng người nghe. Không gây khó chịu cho người ngồi gần.
+                                <br>
+                                - Tham khảo: <a href="youtube.com">https://youtu.be/GwdTXGlG1iI</a></p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-4">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="assets/img/380x213.png"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-3">{{'uu4' | translate}}</h3>
+                                <p class="mb-4">Chương trình bao gồm 4 đối tượng thành viên U22 | CGV Member | CGV VIP và CGV VVIP, với những quyền lợi và mức ưu đãi
+                                khác nhau. Mỗi khi thực hiện giao dịch tại hệ thống rạp CGV, bạn sẽ nhận được một số điểm thưởng tương ứng với cấp độ
+                                thành viên</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Service End -->
+
+
+
+<!-- Booking End -->
+
+
+<!-- Team Start -->
+<!-- <div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class=" text-uppercase" style="color:#B31E8D;"> // Our Technicians //</h6>
+            <h1 class="mb-5">Our Expert Technicians</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-1.jpg" alt="">
+                        <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-2.jpg" alt="">
+                        <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-3.jpg" alt="">
+                        <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="assets/img/team-4.jpg" alt="">
+                        <div class="team-overlay position-absolute start-0 top-0 w-100 h-100">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="fw-bold mb-0">Full Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Team End -->
+
+
+<!-- Testimonial Start -->
+<!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h6 class=" text-uppercase" style="color:#B31E8D;">// Testimonial //</h6>
+            <h1 class="mb-5">Our Clients Say!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel position-relative">
+            <div class="testimonial-item text-center">
+                <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                <h5 class="mb-0">Client Name</h5>
+                <p>Profession</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                <h5 class="mb-0">Client Name</h5>
+                <p>Profession</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                <h5 class="mb-0">Client Name</h5>
+                <p>Profession</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="assets/img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                <h5 class="mb-0">Client Name</h5>
+                <p>Profession</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Testimonial End -->

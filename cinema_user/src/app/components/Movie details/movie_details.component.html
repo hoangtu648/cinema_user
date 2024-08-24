@@ -1,0 +1,361 @@
+<div  id="map" class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="left-image" style="text-align: center;">
+                  <img src="{{movie.photo}}" alt=""  width="65%"/>
+                </div>
+              </div>
+            <div class="col-lg-6">
+                <h1 class="mb-4">{{movie.title}}</h1>
+                <h3 class="mb-4" style="font-size: 16px;"> Được người xem đánh giá: {{ averageStars.toFixed(2) }} / 5 &nbsp;<i class="fas fa-star"></i></h3>
+                <p class="mb-4" style="font-size: 16px;">{{movie.description}}</p>
+                <div class="row g-4 mb-3 pb-3">
+                    <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <h5>Đạo diễn: </h5>
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size: 16px;text-align: left;margin-top: 0;">{{movie.director}}</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <h5>Diễn phim: </h5>
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size: 16px;text-align: left;margin-top: 0;">{{movie.actor}}</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <h5>Thể loại: </h5>
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size: 16px;text-align: left;margin-top: 0;">{{movie.title}}</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <h5>Nhà sản xuất: </h5>
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size: 16px;text-align: left;margin-top: 0;">{{movie.publisher}}</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <h5>Thời lượng: </h5>
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size: 16px;text-align: left;margin-top: 0;">{{movie.duration}}</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <h5>Ngày khởi chiếu: </h5>
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size: 16px;text-align: left;margin-top: 0;">{{formattedReleaseDate}}</p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <h5>Giới hạn tuổi: </h5>
+                            </div>
+                            <div class="col-7">
+                                <p style="font-size: 16px;text-align: left;margin-top: 0;">T{{movie.age}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="col-lg-12 mb-5 mt-5">
+            <div class="section-heading">
+              <div class="select-wrapper">
+                <select name="" id="" class="select-cinema" (change)="selectCinema($event)">
+                  <ng-container *ngFor="let cinema of cinemas">
+                    <option value="{{ cinema.id }}">{{ cinema.name }}</option>
+                  </ng-container>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Date -->
+          <div class="col-lg-12">
+            <div class="btn-group custom-radio-group" role="group" aria-label="Basic radio toggle button group">
+              <input
+                (click)="check($event)"
+                value="{{ date1 | date : 'dd/MM/yyyy' }}"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio1"
+                autocomplete="off"
+                checked
+              />
+              <label class="btn btn-outline-primary custom-radio-label" for="btnradio1">{{ date1 | date : "dd/MM/yyyy" }}</label>
+          
+              <input
+                (click)="check($event)"
+                value="{{ date2 | date : 'dd/MM/yyyy' }}"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio2"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary custom-radio-label" for="btnradio2">{{ date2 | date : "dd/MM/yyyy" }}</label>
+          
+              <input
+                (click)="check($event)"
+                value="{{ date3 | date : 'dd/MM/yyyy' }}"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio3"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary custom-radio-label" for="btnradio3">{{ date3 | date : "dd/MM/yyyy" }}</label>
+          
+              <input
+                (click)="check($event)"
+                value="{{ date4 | date : 'dd/MM/yyyy' }}"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio4"
+              />
+              <label class="btn btn-outline-primary custom-radio-label" for="btnradio4">{{ date4 | date : "dd/MM/yyyy" }}</label>
+          
+              <input
+                (click)="check($event)"
+                value="{{ date5 | date : 'dd/MM/yyyy' }}"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio5"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary custom-radio-label" for="btnradio5">{{ date5 | date : "dd/MM/yyyy" }}</label>
+          
+              <input
+                (click)="check($event)"
+                value="{{ date6 | date : 'dd/MM/yyyy' }}"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio6"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary custom-radio-label" for="btnradio6">{{ date6 | date : "dd/MM/yyyy" }}</label>
+          
+              <input
+                (click)="check($event)"
+                value="{{ date7 | date : 'dd/MM/yyyy' }}"
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio7"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-primary custom-radio-label" for="btnradio7">{{ date7 | date : "dd/MM/yyyy" }}</label>
+            </div>
+          </div>
+
+          <div class="col-lg-12" style="margin-top: 50px">
+            <ng-container *ngFor="let movie of movies">
+              <div class="col-lg-12" *ngIf="movie.showtimes.length != 0">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    border-bottom: 1px solid #aaa;
+                    padding: 0;
+                  "
+                >
+                  <div style="display: flex; margin-bottom: 5px;padding: 20px 0;">
+                    <div style="margin-right: 10px">
+                      <img
+                        src="{{ movie.photo }}"
+                        alt=""
+                        style="
+                          width: 200px;
+                          height: 300px;
+                          object-fit: cover;
+                          object-position: center;
+                        "
+                      />
+                    </div>
+                    <div>
+                      <div style="margin-left: 8px">
+                        <h3 style="color: #333; text-transform: uppercase">
+                          {{ movie.title }}
+                        </h3>
+                        <h6
+                          style="
+                            color: #555;
+                            text-transform: capitalize;
+                            margin: 10px 0 40px 0;
+                          "
+                        >
+                          {{ movie.duration }} - {{ movie.genre }}
+                        </h6>
+                        <!-- <h6 style="color: #888">{{ show.movieTimeLast }}</h6> -->
+                      </div>
+    
+                      <div style="margin-top: 10px">
+                        <!-- <ng-container *ngFor="let showTime of movie.showtimes"> -->
+    
+                        <ng-container *ngFor="let sub of movie.subs">
+                          <h6 style="margin-left: 10px">{{ sub.subName }}</h6>
+                          <br />
+                          <span *ngFor="let showTime of movie.showtimes">
+                            <span *ngIf="showTime.subId == sub.subId">
+                              <a
+                                [routerLink]="['/buy-ticket', showTime.id]"
+                                class="show-link"
+                                [ngStyle]="
+                                  checkHours(showTime.showDate)
+                                    ? {
+                                        'pointer-events': 'none',
+                                        color: 'gray',
+                                        cursor: 'not-allowed'
+                                      }
+                                    : {}
+                                "
+                              >
+                              {{ getFormattedDate(showTime.showDate) }}
+                              </a>
+                            </span>
+                          </span>
+    
+                          <br /><br />
+                        </ng-container>
+    
+                        <!--  <a 
+                            class="show-link"
+                            >aaaa</a
+                          >
+                          <br>
+                          <br> -->
+    
+                        <!-- </ng-container> -->
+                        <!-- <br> <br>
+                        <ng-container *ngFor="let showTime of movie.showtimes">
+                          <a
+                            class="show-link"
+                           
+                            >{{showTime.showDate}}</a
+                          >
+        
+                        </ng-container> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <div
+              *ngIf="movies.length == 0"
+              style="
+                margin-bottom: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+              "
+            >
+              <img
+                src="https://img.freepik.com/free-vector/film-rolls-concept-illustration_114360-6734.jpg?size=626&ext=jpg&uid=R42465319&semt=ais"
+                alt=""
+                style="width: 200px"
+              />
+              <span>Sorry, we don't have any show times for today.</span>
+            </div>
+          </div>
+
+        <div class="row">
+            <div class="qr-code mt-5 text-center">
+                <h1 class="m-4">Trailer</h1>
+             </div>
+             <div class="qr-code mt-2 text-center">
+                <iframe 
+                width="560" 
+                height="315" 
+                [src]="trailerUrl" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+             </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+              <div class="section-heading">
+                  <h2>Bình luận và Đánh giá</h2>
+              </div>
+              
+              <!-- Comment Form -->
+              <div class="comment-form mb-4">
+                  <form (submit)="submitComment($event)">
+                      <div class="mb-3">
+                          <label for="userName" class="form-label">Tên của bạn:</label>
+                          <input type="text" class="form-control" id="userName" [value]="accountUsername != null ? accountUsername : 'Tài khoản ẩn danh'" required  readonly>
+                      </div>
+                      <div class="mb-3">
+                          <label for="userComment" class="form-label">Bình luận:</label>
+                          <textarea class="form-control" id="userComment" rows="4" required></textarea>
+                      </div>
+                      <div class="mb-3">
+                          <label class="form-label">Đánh giá:</label>
+                          <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5" title="5 stars"></label>
+                        
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 stars"></label>
+                        
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars"></label>
+                        
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars"></label>
+                        
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star"></label>
+                        </div>
+                        
+                      </div>
+                      <button type="submit" class="btn btn-primary">Gửi</button>
+                  </form>
+              </div>
+              
+              <!-- Display Comments and Ratings -->
+              <div class="comments-section">
+                  <h3>Những bình luận và đánh giá</h3>
+                  <div *ngFor="let comment of listComment" class="comment">
+                      <div class="comment-header" style="display: block;">
+                        <strong>{{ comment.accountId }}</strong>
+                          <div class="rating" style="position: relative;transform: translateX(-35.7em);">
+                            <span class="star" *ngFor="let star of starsArray; let i = index" [ngClass]="{'filled': i < comment.rate}">
+                              &#9733;
+                            </span>
+                          </div>
+                      </div>
+                      <p>{{ comment.comment }}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+<p-toast></p-toast>

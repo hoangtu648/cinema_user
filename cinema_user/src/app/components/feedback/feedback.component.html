@@ -1,0 +1,104 @@
+<div
+  style="height: 700px"
+  class="container-fluid bg-secondary booking my-5 wow fadeInUp"
+  data-wow-delay="0.1s"
+>
+<form method="post" [formGroup]="FeedbackForm" (ngSubmit)="save()">
+  <div class="container">
+    <div class="row gx-5">
+      <div class="col-lg-6 py-5">
+        <div class="py-5" align="center">
+          <h2 class="text-white mb-4">Main office</h2>
+          <p class="text-white mb-0">(Monday - Friday - 8:30 - 17:30)</p>
+          <p class="text-white mb-0">(028) 6288 7711 (028) 6269 2012</p>
+          <p class="text-white mb-0">contact@abcd.com.vn</p>
+          <h2 class="text-white mb-4">Communication & External Relations</h2>
+          <p class="text-white mb-0">(033) 217 9797</p>
+          <p class="text-white mb-0">phongtruyenthong@abcd.com.vn</p>
+          <h2 class="text-white mb-4">Customer care room</h2>
+          <p class="text-white mb-0">1800.888.886</p>
+          <p class="text-white mb-0">contact@abcd.com.vn</p>
+          <h2 class="text-white mb-4">Hotline for purchase</h2>
+          <p class="text-white mb-0">1800.888.699</p>
+          <h2 class="text-white mb-4">Contact advertising</h2>
+          <p class="text-white mb-0">booking.media@aeon.com.vn</p>
+          <p class="text-white mb-0">028 6288 7711 - Ext: 730</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" id="contact">
+        <br />
+    
+       
+        <p-fieldset>
+          <ng-template pTemplate="header">
+            <div class="flex align-items-center text-primary">
+              <span class="pi pi-user mr-2"></span>
+              <span class="font-bold text-lg"> User Feedback</span>
+            </div>
+          </ng-template>
+          <span class="p-float-label" style="position: relative; left: 200px;">
+            <input pInputText id="username" formControlName="name"/>
+            <label htmlFor="name">Name</label>
+          </span>
+          <br>
+          <span class="p-float-label" style="position: relative; left: 200px;">
+            <input pInputText id="title" formControlName="title"/>
+            <label htmlFor="title">Title</label>
+          </span>
+        
+          <div style="text-align: center">
+            
+            <b style="color: blue"
+              >All your reviews will be recorded and corrected. We hope you will
+              leave us a feedback</b
+            >
+        
+            <br />
+            <p-rating formControlName="value" [cancel]="false"></p-rating>
+         
+            <br />
+            <p-editor [style]="{ height: '220px' }" formControlName="message"  >
+              <ng-template pTemplate="header"  >
+                <span class="ql-formats" >
+                  <button
+                    type="button"
+                    class="ql-bold"
+                    aria-label="Bold"
+                  ></button>
+                  <button
+                    type="button"
+                    class="ql-italic"
+                    aria-label="Italic"
+                  ></button>
+                  <button
+                    type="button"
+                    class="ql-underline"
+                    aria-label="Underline"
+                  ></button>
+                </span>
+              </ng-template>
+            </p-editor>
+          </div>
+        </p-fieldset>
+        <br />
+
+      
+
+        <div style="text-align: center" >
+           <p-button 
+            label="Submit"
+            icon="pi pi-check"
+            iconPos="right"
+            type="submit"
+          ></p-button> 
+          
+        </div>
+      </div>
+   
+    </div>
+    
+  </div>
+</form>
+</div>
+<p-toast></p-toast>

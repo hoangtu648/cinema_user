@@ -1,0 +1,66 @@
+:root {
+    --primary: #B31E8D;
+    --secondary: #0B2154;
+    --light: #F2F2F2;
+    --dark: #111111;
+   
+}
+.bang-gia-ve {
+    font-family: 'Roboto', sans-serif;
+    max-width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #d6ffb5;
+    cursor: pointer;
+}
+
+.ghi-chu {
+    font-size: 14px;
+    color: #444;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.ghi-chu p {
+    margin: 10px 0;
+}
+
+.ghi-chu strong {
+    color: var(--primary);
+}

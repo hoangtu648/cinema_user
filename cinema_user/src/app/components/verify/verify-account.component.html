@@ -1,0 +1,87 @@
+<!-- verify-account.component.html -->
+<div class="verify-account-container">
+    <h1>Xác thực Tài Khoản</h1>
+  
+    <div *ngIf="status === 'loading'" class="loader">
+      <p>Đang xác thực tài khoản, vui lòng chờ...</p>
+    </div>
+  
+    <div *ngIf="status === 'success'" class="success-message">
+      <p>Tài khoản của bạn đã được xác thực thành công!</p>
+    </div>
+  
+    <div *ngIf="status === 'error'" class="error-message">
+      <p>Đã xảy ra lỗi trong quá trình xác thực. Vui lòng thử lại sau.</p>
+    </div>
+  
+    <div class="verify-account-form" *ngIf="status === 'initial'">
+      <form (ngSubmit)="verifyAccount()" #verifyForm="ngForm">
+        <div class="form-group">
+          <label for="email">Địa chỉ Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="email"
+            required
+            class="form-control"
+          />
+        </div>
+  
+        <button type="submit" class="btn btn-primary">Xác thực</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Add CSS styles if necessary -->
+  <style>
+    .verify-account-container {
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      color: #fff;
+      background-color: #007bff;
+      cursor: pointer;
+    }
+  
+    .btn-primary {
+      background-color: #007bff;
+    }
+  
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  
+    .loader {
+      font-size: 18px;
+      color: #007bff;
+    }
+  
+    .success-message {
+      font-size: 18px;
+      color: green;
+    }
+  
+    .error-message {
+      font-size: 18px;
+      color: red;
+    }
+  </style>
+  
